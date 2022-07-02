@@ -1,15 +1,13 @@
 import { UserService } from './UserService'
-import { v4 as uuid } from 'uuid'
+import { getMockUser } from '../__mocks__/mockUser'
 
 jest.mock('../repositories/UserRepository')
 const mockUserRepository = require('../repositories/UserRepository')
 
+
 describe('UserService', () => {
-    const mockUser ={
-        user_id: uuid(),
-        nome: 'Algum usuário',
-        email: 'test@dio.ex'
-    }
+    const mockUser = getMockUser()
+
     const userService = new UserService({
         userRepository: mockUserRepository,
         name: 'Algum usuário',
@@ -21,7 +19,7 @@ describe('UserService', () => {
         const user = await userService.createUser()
         expect(user).toHaveProperty('user_id')
         expect(user).toMatchObject({
-
+            
         })
     })
 })

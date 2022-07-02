@@ -2,13 +2,10 @@ import getEntityManagerMock from '../__mocks__/getEntityManagerMock'
 import { UserRepository } from './UserRepository'
 import { v4 as uuid } from 'uuid'
 import { User } from '../entities/User'
+import { getMockUser } from '../__mocks__/mockUser'
 
 describe('UserRepository', () =>{
-    const mockUser: User = {
-        user_id: uuid(),
-        name: 'Algum nome',
-        email: 'email@dio.ex'
-    }
+    const mockUser: User = getMockUser()
    
     it('Deve retornar usuario salvo, quando chamar a função save', async () =>{
 
