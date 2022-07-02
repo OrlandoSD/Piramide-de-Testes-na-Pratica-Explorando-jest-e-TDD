@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-msedge",
+            "name": "http://  name: 'Algum nome',                email: 'email@dio.ex'",
+            "request": "launch",
+            "url": "http://  name: 'Algum nome',                email: 'email@dio.ex'"
+        }
+    ]
+}
