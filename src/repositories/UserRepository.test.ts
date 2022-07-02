@@ -10,12 +10,18 @@ describe('UserRepository', () =>{
         email: 'email@dio.ex'
     }
    
-    it('deve retornar usuario salvo, quando chamar a função save', async () =>{
+    it('Deve retornar usuario salvo, quando chamar a função save', async () =>{
 
         const managerMock = await getEntityManagerMock({
             saveReturn: mockUser
         })
         const userRepository = new UserRepository(managerMock)
+        const user = await userRepository.save(mockUser)
+        expect(user).toHaveProperty('user_id')
+        expect(user).toMatchObject({
+            name: 'Algum nome',
+            email: 'email@dio.ex'
+        })
     
 
     })
