@@ -14,7 +14,11 @@ describe('MessageController', () => {
 
     expect(response.state.status).toBe(200)
     expect(response.state.json).toEqual({
-      message: 'Wellcome to TestsAPI'
+      message: 'Wellcome to TwiDio'
     })
   })
 })
+function expect(status: any) {
+  throw new Error('Function not implemented.')
+}
+
