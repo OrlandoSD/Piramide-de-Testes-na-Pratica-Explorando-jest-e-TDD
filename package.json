@@ -42,6 +42,7 @@
     "yarn": "^1.22.19"
   },
   "dependencies": {
+    "mock": "^0.1.1",
     "reflect-metadata": "^0.1.13",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2",
