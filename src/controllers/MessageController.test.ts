@@ -3,7 +3,7 @@ import { makeMockRequest } from '../__mocks__/mockRequest'
 import { MessageController } from './MessageController'
 
 describe('MessageController', () => {
-  ('show a wellcome message', async () => {
+  it('Should show a wellcome message', async () => {
     const messageController = new MessageController()
 
     const request = makeMockRequest({})
@@ -14,7 +14,7 @@ describe('MessageController', () => {
 
     expect(response.state.status).toBe(200)
     expect(response.state.json).toEqual({
-      message: 'Wellcome to TwiDio'
+      message: 'Wellcome to TestsAPI'
     })
   })
 })
