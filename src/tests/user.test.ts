@@ -6,11 +6,11 @@ const server = axios.create({
 
 describe('/user', () =>{
     it('Deve retornar o status 200', async () =>{
-        const user = server.post('/user', {
+        const user = await server.post('/user', {
             name: 'Algum usuário',
             email: 'email@dio.ex'
         })
 
-        expect((await user).status).toBe(201)
+        expect(user.status).toBe(201)
     })
 })
