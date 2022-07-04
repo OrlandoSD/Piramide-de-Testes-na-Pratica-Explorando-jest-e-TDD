@@ -24,16 +24,15 @@ describe('UserController', () => {
 
     it('Deve retornar status 201 e o usuário criado', async () =>{
         const request = makeMockRequest()
-        const request{
             body: {
                 name: 'Algum nome',
                 email: 'email@dio.ex'
 
             }
-        }as Resquest
+        })as Resquest
 
         const response = makeMockResponse()
-        mockReturnCreate = jest.fn().mockImplementation(() => Promise.resolve(mockUser))
+        const mockReturnCreate = jest.fn().mockImplementation(() => Promise.resolve(mockUser))
         await userController.createUser(request, response)
         expect(response.state.status).toBe(201)
         expect(response.state.json).toHaveProperty('user_id')
